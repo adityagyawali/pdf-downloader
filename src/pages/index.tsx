@@ -36,7 +36,7 @@ export default function Home() {
       link.click();
       window.URL.revokeObjectURL(url);
     } catch (error) {
-      setError('Error downloading PDF');
+      setError(`Error downloading PDF ${error}`);
     }
   };
 

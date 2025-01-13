@@ -14,6 +14,6 @@ export function verifyToken(req: NextApiRequest) {
     const decoded = jwt.verify(token, JWT_SECRET);
     return decoded;
   } catch (error) {
-    throw new Error('Invalid token');
+    throw new Error('Invalid token', { cause: error });
   }
 }

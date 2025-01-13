@@ -24,6 +24,6 @@ export default async function handler(
     res.setHeader('Content-Disposition', 'attachment; filename="document.pdf"');
     return res.send(Buffer.from(response.data));
   } catch (error) {
-    return res.status(401).json({ message: 'Unauthorized' });
+    return res.status(401).json({ message: 'Unauthorized', error: error });
   }
 }
