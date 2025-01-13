@@ -16,7 +16,7 @@ export default function Home() {
       login(response.data.token, response.data.user);
       setError('');
     } catch (error) {
-      setError('Invalid credentials');
+      setError(`Invalid credentials ${error}`);
     }
   };
   const handleDownload = async () => {
